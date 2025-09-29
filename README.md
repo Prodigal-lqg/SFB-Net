@@ -44,10 +44,7 @@ x = torch.randn(1, 3, 256, 256)
 outputs = model(x)
 mask, edge, distance = outputs
 ```
-## 🚀 Usage
-Netherlands: large heterogeneous parcels.
 
-Denmark: small irregular parcels with weak boundaries.
 ## 📜 Citation
 
 If you find this work useful, please cite our paper:
