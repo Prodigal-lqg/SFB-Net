@@ -14,13 +14,16 @@ It introduces two complementary modules:
 
 ---
 ## Data Preprocessing
-1.We crop the original images and their corresponding annotations into 256×256 patches to standardize the input size for training.
+This study utilizes remote sensing datasets from both the Netherlands and Denmark.
+Netherlands dataset covers typical intensive agricultural areas, where parcels are generally large and heterogeneous, while also including some small irregular fields. After cropping the images into 256×256 patches and discarding samples with less than 30% parcel coverage, the dataset consists of 4,970 training samples, 1,243 validation samples, and 1,041 testing samples
 
-2.Patches with less than 30% parcel coverage are discarded to reduce class imbalance, and the remaining data are split into 5,499 training samples, 1,376 validation samples, and 1,208 testing samples to ensure a balanced dataset for model development and evaluation.
+Denmark dataset is characterized by fragmented and irregular parcels distributed in terrain-influenced heterogeneous landscapes. Such parcels often exhibit weak or discontinuous boundaries, posing greater challenges for accurate delineation. Similar to the Netherlands dataset, the images and annotations were cropped into 256×256 patches, and samples with less than 30% parcel coverage were discarded. According to the defined partition strategy, the red-marked regions (A, B, D, F, G) were assigned to the training set, the green-marked regions (C, E) to the validation set, and the remaining regions to the test set. In total, the Denmark dataset contains 5,535 training samples, 1,383 validation samples, and 1,297 testing samples
+<p align="center">
+<img width="639" height="1205" alt="75cc7391fbc579158f0e673e2fda7b6c" src="https://github.com/user-attachments/assets/897532a7-8786-45c5-a46a-81226f5befd6" />
+</p>
 
-3.We apply multiple data augmentation techniques, including flipping, mirroring, Gaussian noise, contrast adjustment, scaling, and mix-up, to enhance sample diversity and improve model generalization..
 
-
+To further enhance model generalization, multiple data augmentation techniques were applied during training, including random flipping, mirroring, Gaussian noise, contrast adjustment, scaling, and mix-up. These augmentations effectively increased sample diversity and alleviated the negative impact of parcel fragmentation and blurred boundaries.
 ## ⚙️ Installation
 Clone this repository:
 ```bash
