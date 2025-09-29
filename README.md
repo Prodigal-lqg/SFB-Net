@@ -19,7 +19,7 @@ Netherlands dataset covers typical intensive agricultural areas, where parcels a
 
 Denmark dataset is characterized by fragmented and irregular parcels distributed in terrain-influenced heterogeneous landscapes. Such parcels often exhibit weak or discontinuous boundaries, posing greater challenges for accurate delineation. Similar to the Netherlands dataset, the images and annotations were cropped into 256×256 patches, and samples with less than 30% parcel coverage were discarded. According to the defined partition strategy, the red-marked regions (A, B, D, F, G) were assigned to the training set, the green-marked regions (C, E) to the validation set, and the remaining regions to the test set. In total, the Denmark dataset contains 5,535 training samples, 1,383 validation samples, and 1,297 testing samples
 <p align="center">
-<img width="639" height="1205" alt="75cc7391fbc579158f0e673e2fda7b6c" src="https://github.com/user-attachments/assets/897532a7-8786-45c5-a46a-81226f5befd6" />
+<img width="639" height="800" alt="75cc7391fbc579158f0e673e2fda7b6c" src="https://github.com/user-attachments/assets/897532a7-8786-45c5-a46a-81226f5befd6" />
 </p>
 
 
@@ -36,7 +36,7 @@ Run the following example to test the model:
 
 ```python
 import torch
-from CSGMNet import Field
+from SFB-Net import Field
 
 model = Field()
 x = torch.randn(1, 3, 256, 256)
